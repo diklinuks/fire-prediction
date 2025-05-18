@@ -19,7 +19,7 @@ if not os.path.exists(model_path):
 model = joblib.load(model_path)
 
 st.title("Wildfire risk prediction model")
-st.subheader("Enter weather data for the 3 days")
+st.subheader("Enter weather data for the 3 days(average for day)")
 
 temps = [st.number_input(f"Temperature Day {i+1} (F)", value=0.0) for i in range(3)]
 temperature_day_max = max(temps)
