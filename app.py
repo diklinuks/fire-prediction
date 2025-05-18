@@ -12,7 +12,12 @@ url = f"https://drive.google.com/uc?export=download&id={file_id}"
 if not os.path.exists(model_path):
     gdown.download(url, model_path, quiet=False)
 
+if not os.path.exists(model_path):
+    st.error("Model file not found")
+    st.stop()
+
 model = joblib.load(model_path)
+
 st.title("Wildfire risk prediction model")
 st.subheader("Enter weather data for the 3 days")
 
