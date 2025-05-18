@@ -6,8 +6,10 @@ import gdown
 
 model_path = "final_model.pkl"
 
+file_id = "14zj3Wf29w-iTyzOT4m4yNNNQCN0MzmED"
+url = f"https://drive.google.com/uc?export=download&id={file_id}"
+
 if not os.path.exists(model_path):
-    url = "https://drive.google.com/file/d/14zj3Wf29w-iTyzOT4m4yNNNQCN0MzmED/view?usp=drive_link"
     gdown.download(url, model_path, quiet=False)
 
 model = joblib.load(model_path)

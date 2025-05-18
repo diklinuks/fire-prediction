@@ -4,3 +4,4 @@ scikit-learn
 joblib
 os
 gdown
+requests
